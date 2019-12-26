@@ -9,19 +9,21 @@ import (
 )
 
 const (
-  debug bool = false
+  devMode bool = true
 )
 
 func main() {
   log.Println("Generating Invoice...")
 
-  // load template & input
+  // load input & template
   template := getData("template.txt")
   input := getData("input.txt")
 
   // check debug mode
   borderMode := "0"
-  if (debug == true) {
+  if (devMode == true) {
+	  template = getData("template.txt.dev")
+	  input = getData("input.txt.dev")
     borderMode = "1"
   }
 
@@ -62,7 +64,7 @@ func main() {
 	pdf.SetFont("Arial", "B", 10)
 	pdf.Line(xBeforeMeta, yBeforeMeta, xBeforeMeta + 170, yBeforeMeta)
 	pdf.CellFormat(110, 10, tr(input[1]), borderMode, 0, "L", false, 0, "")
-  pdf.CellFormat(60, 10, tr(input[2]), borderMode, 0, "L", false, 0, "")
+  pdf.CellFormat(60, 10, tr(input[2]), borderMode, 0, "R", false, 0, "")
   pdf.Ln(12)
 
   // set invoice text1
