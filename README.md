@@ -5,7 +5,7 @@
 ## 🧾 About this app..
 A simple tool which generates basic pdf invoice documents. The application has a predefined layout in which you can fill your own data by customizing the `template.txt` and `data.txt` files. When executing the tool, it will read these input files and build an invoice pdf document.
 
-## ⚙ How it works
+## ⚙ How to use
 I used the [gofpdf library](https://github.com/jung-kurt/gofpdf) to build this tool. The Layout is defined by multiple different cell objects within the pdf (see sample below), which are filled with the data provided by the input files. 
 The input elements in these files are divided from one another by `\n;\n`, and so can be easily customized with any basic text editor.
 
