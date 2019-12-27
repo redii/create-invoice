@@ -1,11 +1,12 @@
-Lorem ipsum
-consetetur de
-invidunt ut 12
+ABC Company
+Tim Carter
+Esplanade 69
+63913 Amorbach
 ;
-Invoice 1234567890
+Invoice 12345
 ;
 Berlin, 01.01.2020
 ;
 Description;Amount;Type;Cost;Total
-Service xyz;12.5;Hours;30
-Product 01;4;Pieces;7.5
+IT-Support Service;5.5;Hours;30
+Network Switch;1;Pieces;25
